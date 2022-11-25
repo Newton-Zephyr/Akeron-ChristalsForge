@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============================== Forging Speed ===================================-->
+  <StatDef>
+    <defName>AKN_ForgingSpeed</defName>
+    <label>Forging speed</label>
+    <description>The speed at which this person is able to perform specific crafting techniques involving extreme tempretures.\n\nThis mainly applies to works involving reinforced tartarite</description>
+    <category>PawnWork</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.1</minValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <statFactors>
+      <li>GeneralLaborSpeed</li>  
+    </statFactors>
+    <capacityFactors>
+      <li>
+        <capacity>Sight</capacity>
+        <weight>0.3</weight>
+        <max>1</max>
+      </li>
+      <li>
+        <capacity>Manipulation</capacity>
+        <weight>1</weight>
+      </li>
+    </capacityFactors>
+    <displayPriorityInCategory>4499</displayPriorityInCategory>
+  </StatDef>
+  
+</Defs>  

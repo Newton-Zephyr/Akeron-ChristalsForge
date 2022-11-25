@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+<!--=============================== Tartarite Recipie ===================================-->
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="AKN_MakeTartariteAtSmithingTable"]/ingredients</xpath>
+        <value>
+    <ingredients>		
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_IronOre</li>
+          </thingDefs>
+        </filter>
+        <count>35</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_GoldOre</li>
+          </thingDefs>
+        </filter>
+        <count>0.5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+        </value>	
+    </Operation>
+	
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="AKN_MakeTartariteAtSmithingTable"]/fixedIngredientFilter</xpath>
+        <value>
+    <fixedIngredientFilter>		
+      <thingDefs>
+        <li>DankPyon_IronOre</li>
+        <li>DankPyon_GoldOre</li>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>	  
+        </value>
+    </Operation>
+	
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="AKN_MakeTartariteAtSmithy"]/ingredients</xpath>
+        <value>
+    <ingredients>		
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_IronOre</li>
+          </thingDefs>
+        </filter>
+        <count>35</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_GoldOre</li>
+          </thingDefs>
+        </filter>
+        <count>0.5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>	  
+    </ingredients>
+        </value>	
+    </Operation>
+	
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="AKN_MakeTartariteAtSmithy"]/fixedIngredientFilter</xpath>
+        <value>
+    <fixedIngredientFilter>		
+      <thingDefs>
+        <li>DankPyon_IronOre</li>
+        <li>DankPyon_GoldOre</li>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>	  
+        </value>
+    </Operation>
+	
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AKN_MakeTartariteAtSmithy"]/recipeUsers</xpath>
+        <value>
+	  <li>DankPyon_Furnace</li>		
+        </value>
+    </Operation>
+	
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="AKN_MakeTartariteAtSmithy"]/label</xpath>
+        <value>
+    <label>smelt ores into tartarite ingots</label>		
+        </value>
+    </Operation>
+	
+<!--=============================== Tartarite Rename ===================================-->
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="AKN_Tartarite"]/label</xpath>
+        <value>
+    <label>Tartarite ingot</label>		
+        </value>		
+    </Operation>	
+	
+<!--=============================== Paxel Research ===================================-->
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="AKN_Paxel"]/recipeMaker/researchPrerequisites</xpath>
+        <value>
+    <researchPrerequisites>
+	<li>DankPyon_MilitaryHammers</li>
+	<li>DankPyon_MilitaryAxes</li>	
+	</researchPrerequisites>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="AKN_ReinforcePaxelI" or defName="AKN_ReinforcePaxelII" or defName="AKN_ReinforcePaxelIII"]/researchPrerequisites</xpath>
+        <value>
+    <researchPrerequisites>
+	<li>AKN_TartariteReinforcement</li>
+	<li>DankPyon_MilitaryHammers</li>
+	<li>DankPyon_MilitaryAxes</li>
+	</researchPrerequisites>
+        </value>
+    </Operation>
+	
+<!--=============================== Axe Research ===================================-->
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="AKN_ReinforceAxeI" or defName="AKN_ReinforceAxeII" or defName="AKN_ReinforceAxeIII"]/researchPrerequisites</xpath>
+        <value>
+    <researchPrerequisites>
+	<li>AKN_TartariteReinforcement</li>
+	<li>DankPyon_MilitaryAxes</li>	
+	</researchPrerequisites>
+        </value>
+    </Operation>
+
+<!--=============================== Medival Linkables ===================================-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AKN_FueledSmithingTable" or defName="AKN_ElectricSmithingTable"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+        <value>
+              <li>DankPyon_Grinder</li>
+		      <li>DankPyon_ToolRack</li>
+        </value>
+    </Operation>
+	
+</Patch>

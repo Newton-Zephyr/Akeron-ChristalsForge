@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<loadFolders>
+    <v1.4>
+	  <li>Common</li>	
+	  <li IfModActive="VanillaExpanded.VWE,Ludeon.RimWorld.Royalty,DankPyon.Medieval.Overhaul">Extras/Reinforced Extra/Reinforced Axe</li>
+	  <li IfModActive="VanillaExpanded.VWE">Extras/Vanilla Weapons Expanded</li>
+	  <li IfModActive="DankPyon.Medieval.Overhaul">Extras/Medieval Overhaul</li>
+	  <li IfModActive="Newton.AKN.CaretakerApparel">1.4/SYNergies/SYN-Akeron Caretaker Apparel</li>
+	  <li>1.4</li>
+    </v1.4>
+</loadFolders>

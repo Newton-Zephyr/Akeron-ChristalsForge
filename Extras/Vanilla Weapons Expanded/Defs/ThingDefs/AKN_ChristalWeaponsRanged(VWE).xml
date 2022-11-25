@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--=============================== Cross Bolter w/Knifes (VWE) ===============================-->    
+  <ThingDef ParentName="AKN_BaseCrossBolter">
+    <defName>AKN_KnifeCrossBolter</defName>
+    <label>Cross Bolter (Knives)</label>
+    <techLevel>Medieval</techLevel>	
+    <tradeability>Sellable</tradeability>	
+    <description>A greatly reinforced variant of the Pillage Bolter, now fitted with four arms and tartarite reinforced mechanisms that aid in reloading at the cost of its increased weight, slightly hindering aiming time. Such a design can easily be used to launch any projectile one could fit in its rail.
+	
+This one has been loaded with knives capable of dismembering most unarmored foes in a single shot.</description>
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Bolter/AKN_CrossBolter_Knife</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>	
+    <costList>
+      <AKN_CrossBolter>1</AKN_CrossBolter>
+      <AKN_CrossLoadedKnives>1</AKN_CrossLoadedKnives>
+    </costList>
+	<smeltable>false</smeltable>	
+    <statBases>
+      <WorkToMake>60</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>1.00</AccuracyShort>
+      <AccuracyMedium>0.70</AccuracyMedium>
+      <AccuracyLong>0.60</AccuracyLong>
+      <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>AKN_CrossBolterFlyingBlade</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <range>19.9</range>
+        <soundCast>Bow_Large</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2.0</cooldownTime>
+      </li>	
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>3</cooldownTime>
+      </li>
+    </tools>
+	
+	<modExtensions>
+      <li Class="VFECore.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>	
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>AKN_CrossBolterFlyingBlade</defName>
+    <label>cross bolter knife</label>
+    <graphicData>
+      <texPath>Things/Projectile/KnifeThrown</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>AKN_RangedCut</damageDef>
+      <damageAmountBase>33</damageAmountBase>
+	  <armorPenetrationBase>0.27</armorPenetrationBase>	  
+      <speed>40</speed>
+    </projectile>
+  </ThingDef>
+    	
+    <!--=============================== Cross-loaded Knives (VWE) ===============================-->
+  <ThingDef ParentName="AKN_BaseReinforcedWeapon">
+    <defName>AKN_CrossLoadedKnives</defName> 
+    <label>Cross-loaded Knives</label>
+    <techLevel>Medieval</techLevel>			
+    <description>A set of well balanced knives sorted and standardised for firing with a Cross Bolter. It is also easy to handle and perfect for throwing.</description>
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Bolter/AKN_CrossLoaded_Knives</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Steel>40</Steel>
+    </costList>
+    <smeltable>false</smeltable>	
+    <soundInteract>Silver_Drop</soundInteract>
+    <burnableByRecipe>true</burnableByRecipe>
+    <statBases>
+      <Mass>1</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+      <RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>		
+    <weaponTags>
+      <li>CrossLoadedAmmo</li>
+    </weaponTags>
+    <recipeMaker Inherit="false"/>	
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>AKN_CrossLoadedKnivesFlyingBlade</defaultProjectile>
+        <warmupTime>1.4</warmupTime>
+        <range>14.9</range>
+        <soundCast>ThrowGrenade</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+	
+	<modExtensions>
+      <li Class="VFECore.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>	
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>AKN_CrossLoadedKnivesFlyingBlade</defName>
+    <label>small knife</label>
+    <graphicData>
+      <texPath>Things/Projectile/KnifeThrown</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <speed>16</speed>
+    </projectile>
+  </ThingDef>
+  
+  <!--=============================== Load Crossbolter w/Knifes (VWE) ===================================-->
+  <RecipeDef>
+    <defName>AKN_LoadKnifeCrossBolter</defName>
+    <label>load knives into Cross Bolter</label>
+    <description>Load knives into Cross Bolter</description>
+    <jobString>Loading Cross Bolter.</jobString>
+    <workSpeedStat>AKN_ForgingSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workAmount>60</workAmount>
+	<useIngredientsForColor>false</useIngredientsForColor>	
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>VWE_Throwing_Knives</li>
+            <li>AKN_CrossLoadedKnives</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+     <li>
+        <filter>
+          <thingDefs>
+            <li>AKN_CrossBolter</li>			
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>	  
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>VWE_Throwing_Knives</li>
+        <li>AKN_CrossLoadedKnives</li>		
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_KnifeCrossBolter>1</AKN_KnifeCrossBolter>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+  <!--=============================== Unload Crossbolter w/Knifes ===================================-->
+  <RecipeDef>
+    <defName>AKN_UnloadKnifeCrossBolter</defName>
+    <label>unload knives from Cross Bolter</label>
+    <description>Unload knives from Cross Bolter</description>
+    <jobString>Unloading Cross Bolter.</jobString>
+    <workSpeedStat>AKN_ForgingSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workAmount>60</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AKN_KnifeCrossBolter</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>AKN_KnifeCrossBolter</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_CrossBolter>1</AKN_CrossBolter>
+      <AKN_CrossLoadedKnives>1</AKN_CrossLoadedKnives>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+    <!--=============================== Cross Bolter w/Rocks (VWE) ===============================-->    
+  <ThingDef ParentName="AKN_BaseCrossBolter">
+    <defName>AKN_RockCrossBolter</defName>
+    <label>Cross Bolter (Rocks)</label>
+    <techLevel>Medieval</techLevel>	
+    <tradeability>Sellable</tradeability>	
+    <description>A greatly reinforced variant of the Pillage Bolter, now fitted with four arms and tartarite reinforced mechanisms that aid in reloading at the cost of its increased weight, slightly hindering aiming time. Such a design can easily be used to launch any projectile one could fit in its rail.
+	
+This one has been loaded with blunt rocks, really only useful for simply knocking down targets at a range, and is easy to load due to the projectiles arrangement not being important.</description>	
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Bolter/AKN_CrossBolter_Rock</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>	
+    <costList>
+      <AKN_CrossBolter>1</AKN_CrossBolter>
+      <AKN_CrossLoadedRocks>1</AKN_CrossLoadedRocks>
+    </costList>
+	<smeltable>false</smeltable>	
+    <statBases>
+      <WorkToMake>60</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>1.00</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.20</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>AKN_CrossBolterFlyingRock</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <range>19.9</range>
+        <soundCast>Bow_Large</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>rock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2.0</cooldownTime>
+      </li>	
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>3</cooldownTime>
+      </li>
+    </tools>	
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>AKN_CrossBolterFlyingRock</defName>
+    <label>cross bolter rock</label>
+    <graphicData>
+      <texPath>Things/Projectile/RockThrown</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>6</damageAmountBase>
+      <arcHeightFactor>0.5</arcHeightFactor>
+      <shadowSize>0.4</shadowSize>	  
+      <speed>25</speed>
+    </projectile>
+  </ThingDef>
+    	
+    <!--=============================== Cross-loaded Rocks (VWE) ===============================-->
+  <ThingDef ParentName="AKN_BaseReinforcedWeapon">
+    <defName>AKN_CrossLoadedRocks</defName> 
+    <label>Cross-loaded Rocks</label>
+    <techLevel>Medieval</techLevel>
+    <description>A handful of blunt rocks sorted and standardised for firing with a Cross Bolter. It is also easy to handle and can inflict minor injuries in close range.</description>
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Bolter/AKN_CrossLoaded_Rocks</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <ChunkMarble>1</ChunkMarble>
+    </costList>
+    <smeltable>false</smeltable>	
+    <soundInteract>Silver_Drop</soundInteract>
+    <statBases>
+      <Mass>1</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.2</AccuracyLong>
+      <RangedWeapon_Cooldown>2.1</RangedWeapon_Cooldown>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>		
+    <weaponTags>
+      <li>CrossLoadedAmmo</li>
+    </weaponTags>
+    <recipeMaker Inherit="false"/>	
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>AKN_CrossLoadedRockFlyingRock</defaultProjectile>
+        <warmupTime>1.8</warmupTime>
+        <range>14.9</range>
+        <soundCast>ThrowGrenade</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+
+	<modExtensions>
+      <li Class="VFECore.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>	
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>AKN_CrossLoadedRockFlyingRock</defName>
+    <label>small rock</label>
+    <graphicData>
+      <texPath>Things/Projectile/RockThrown</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>4</damageAmountBase>
+      <arcHeightFactor>1.5</arcHeightFactor>
+      <shadowSize>0.5</shadowSize>
+      <speed>12</speed>
+    </projectile>
+  </ThingDef>
+  
+  <!--=============================== Load Crossbolter w/Rock (VWE) ===================================-->
+  <RecipeDef>
+    <defName>AKN_LoadRockCrossBolter</defName>
+    <label>load rocks into Cross Bolter</label>
+    <description>Load rocks into Cross Bolter</description>
+    <jobString>Loading Cross Bolter.</jobString>
+    <workSpeedStat>AKN_ForgingSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workAmount>60</workAmount>
+	<useIngredientsForColor>false</useIngredientsForColor>	
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>VWE_Throwing_Rocks</li>
+            <li>AKN_CrossLoadedRocks</li>			
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+     <li>
+        <filter>
+          <thingDefs>
+            <li>AKN_CrossBolter</li>			
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>	  
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>VWE_Throwing_Rocks</li>
+        <li>AKN_CrossLoadedRocks</li>		
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_RockCrossBolter>1</AKN_RockCrossBolter>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+  <!--=============================== Unload Crossbolter w/Knife ===================================-->
+  <RecipeDef>
+    <defName>AKN_UnloadRockCrossBolter</defName>
+    <label>unload rocks from Cross Bolter</label>
+    <description>Unload rocks from Cross Bolter</description>
+    <jobString>Unloading Cross Bolter.</jobString>
+    <workSpeedStat>AKN_ForgingSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workAmount>60</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AKN_RockCrossBolter</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>AKN_RockCrossBolter</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_CrossBolter>1</AKN_CrossBolter>
+      <AKN_CrossLoadedRocks>1</AKN_CrossLoadedRocks>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+</Defs>  

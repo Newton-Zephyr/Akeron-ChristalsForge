@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!--=============================== Paxel ===============================-->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>AKN_Paxel</defName>
+    <label>Paxel</label>
+    <techLevel>Medieval</techLevel>
+    <tradeability>Sellable</tradeability>
+    <description>A tool with a pickaxe and an axe head on one end and a shovel head on the other, as well as an ergonomic wooden handle in the middle.
+
+This combination of tools allows for the convenience of carrying a single tool for different jobs as well as acting as a devastating weapon with its cutting or piercing ends as well as its breaching weight.
+
+However, the weight of all those tool heads makes it difficult to carry many items alongside them.</description>
+    <recipeMaker>
+      <researchPrerequisites>
+	  <li>LongBlades</li>
+	  </researchPrerequisites>
+	  <recipeUsers>
+		<li>FueledSmithy</li>
+		<li>ElectricSmithy</li>
+		<li>AKN_FueledSmithingTable</li>
+		<li>AKN_ElectricSmithingTable</li>		
+	  </recipeUsers>	  
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>	
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Paxel/AKN_Paxel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>	  
+    </graphicData>
+	<stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>100</costStuffCount>		
+    <costList>
+      <WoodLog>15</WoodLog>
+    </costList>
+    <statBases>	
+      <WorkToMake>21000</WorkToMake>
+      <Mass>4.5</Mass>
+      <MaxHitPoints>200</MaxHitPoints>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>0</Beauty>
+    </statBases>
+	<equippedStatOffsets>
+      <MiningSpeed>0.15</MiningSpeed>
+	  <PlantWorkSpeed>0.15</PlantWorkSpeed>
+      <PlantHarvestYield>0.05</PlantHarvestYield>
+    </equippedStatOffsets>		
+    <weaponTags>
+      <li>ChristalMeleeBasic</li>
+    </weaponTags>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5.0</power>
+        <cooldownTime>2.0</cooldownTime>
+      </li>	
+	  <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>16.0</power>	
+		<armorPenetration>0.43</armorPenetration>		
+        <cooldownTime>3.0</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>19</power>
+		<armorPenetration>0.45</armorPenetration>		
+        <cooldownTime>3.0</cooldownTime>
+      </li>		  
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>26.0</power>
+		<armorPenetration>0.33</armorPenetration>		
+        <cooldownTime>3.0</cooldownTime>
+      </li>	  
+    </tools>
+  </ThingDef>
+
+</Defs>

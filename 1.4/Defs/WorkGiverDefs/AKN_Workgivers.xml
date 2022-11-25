@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============================== Smithing Table ===================================-->
+  <WorkGiverDef>
+    <defName>AKN_DoBillsSmithingTable</defName>
+    <label>craft things</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Smithing</workType>
+    <priorityInType>50</priorityInType>
+    <fixedBillGiverDefs>
+      <li>AKN_FueledSmithingTable</li>
+	  <li>AKN_ElectricSmithingTable</li>	  
+    </fixedBillGiverDefs>
+    <verb>craft</verb>
+    <gerund>crafting things at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+  <!--=============================== Cross-loading Spot ===================================-->  
+    <WorkGiverDef>
+    <defName>AKN_DoBillsCrossLoadingSpot</defName>
+    <label>craft things</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>100</priorityInType>
+    <fixedBillGiverDefs>
+      <li>AKN_CrossLoadingSpot</li> 
+    </fixedBillGiverDefs>
+    <verb>craft</verb>
+    <gerund>reloading bolter at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+</Defs>

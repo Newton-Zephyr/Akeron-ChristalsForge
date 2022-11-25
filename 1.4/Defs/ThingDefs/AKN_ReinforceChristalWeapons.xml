@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============================== Reinforced Paxel ===============================-->
+  <ThingDef ParentName="AKN_BaseReinforcedWeapon">
+    <defName>AKN_TReinforcedPaxelI</defName>
+    <label>Tartarite Reinforced Paxel(I)</label>
+    <techLevel>Medieval</techLevel>
+    <tradeability>Sellable</tradeability>
+    <description>Tartarite Reinforced Paxel(I)
+	
+A Paxel with a reinforced tatarite design. Reliably crafted with denser, more durable materials that allow for increased performance among standard designs.
+
+Can be further improved upon via additional reinforcement.</description>	
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Paxel/AKN_PaxelReinforcedI</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <AKN_Tartarite>100</AKN_Tartarite>
+	  <WoodLog>15</WoodLog>
+    </costList>
+    <statBases>	
+      <WorkToMake>52800</WorkToMake>
+      <Mass>4.5</Mass>
+      <MaxHitPoints>700</MaxHitPoints>
+      <DeteriorationRate>1.5</DeteriorationRate>
+      <Beauty>0</Beauty>
+    </statBases>
+	<equippedStatOffsets>
+      <MiningSpeed>0.20</MiningSpeed>
+	  <PlantWorkSpeed>0.20</PlantWorkSpeed>
+      <PlantHarvestYield>0.7</PlantHarvestYield>
+    </equippedStatOffsets>	
+	<thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>	
+    <weaponTags>
+      <li>ChristalMeleeReinforced</li>
+    </weaponTags>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9.0</power>
+        <cooldownTime>2.3</cooldownTime>
+      </li>		
+	  <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>36</power>	
+		<armorPenetration>0.48</armorPenetration>		
+        <cooldownTime>3.45</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>30</power>
+		<armorPenetration>0.55</armorPenetration>		
+        <cooldownTime>3.45</cooldownTime>
+      </li>	  
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>41</power>
+		<armorPenetration>0.38</armorPenetration>		
+        <cooldownTime>3.45</cooldownTime>
+      </li>	  
+    </tools>
+  </ThingDef>
+  
+  <RecipeDef ParentName="AKN_BaseReinforceRecipe">
+    <defName>AKN_ReinforcePaxelI</defName>
+    <label>Forge Tartarite Reinforced Paxel(I)</label>
+    <description>Forge Tartarite Reinforced Paxel(I)</description>
+    <jobString>Forging Reinforced Paxel(I)</jobString>
+    <skillRequirements>
+      <Crafting>7</Crafting>
+    </skillRequirements>
+    <researchPrerequisites>
+	<li>AKN_TartariteReinforcement</li>
+	<li>LongBlades</li>
+	</researchPrerequisites>
+    <workAmount>52800</workAmount>	  
+    <ingredients>
+     <li>
+       <filter>
+         <thingDefs>
+            <li>AKN_Paxel</li>
+         </thingDefs>
+       </filter>
+       <count>1</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_Tartarite</li>			
+         </thingDefs>
+       </filter>
+       <count>100</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>WoodLog</li>			
+         </thingDefs>
+       </filter>
+       <count>15</count>
+     </li>	 	 
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>AKN_Paxel</li>	  	
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_TReinforcedPaxelI>1</AKN_TReinforcedPaxelI>
+    </products>
+  </RecipeDef>   
+  
+  <ThingDef ParentName="AKN_BaseReinforcedWeapon">
+    <defName>AKN_TReinforcedPaxelII</defName>
+    <label>Tartarite Reinforced Paxel(II)</label>
+    <techLevel>Medieval</techLevel>
+    <tradeability>Sellable</tradeability>
+    <description>Tartarite Reinforced Paxel(II)
+	
+A Paxel that had been further reinforced. Much of the material has been redistributed along with the introduction of the adjustable tartarite rings for the ability to rebalance the tool at any given moment, allowing for an increased speed that surpasses even quality designs.
+
+Can be further improved upon via additional reinforcement.</description>	
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Paxel/AKN_PaxelReinforcedII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>		
+    <costList>
+	  <AKN_TReinforcedPaxelI>1</AKN_TReinforcedPaxelI>
+	  <AKN_ReinforcedTartariteRing>2</AKN_ReinforcedTartariteRing>	  
+      <AKN_Tartarite>60</AKN_Tartarite>
+    </costList>
+    <statBases>	
+      <WorkToMake>53700</WorkToMake>
+      <Mass>4.5</Mass>
+      <MaxHitPoints>800</MaxHitPoints>
+      <DeteriorationRate>1.2</DeteriorationRate>
+      <Beauty>0</Beauty>
+    </statBases>
+	<equippedStatOffsets>
+      <MiningSpeed>0.25</MiningSpeed>
+	  <PlantWorkSpeed>0.25</PlantWorkSpeed>
+      <PlantHarvestYield>0.10</PlantHarvestYield>
+    </equippedStatOffsets>
+	<thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>	
+    <weaponTags>
+      <li>ChristalMeleeReinforced</li>
+    </weaponTags>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+     <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9.0</power>
+        <cooldownTime>2.3</cooldownTime>
+      </li>	 	
+	  <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>36.0</power>	
+		<armorPenetration>0.55</armorPenetration>		
+        <cooldownTime>3.2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>30</power>
+		<armorPenetration>0.65</armorPenetration>		
+        <cooldownTime>3.2</cooldownTime>
+      </li>	  
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>41</power>
+		<armorPenetration>0.43</armorPenetration>		
+        <cooldownTime>3.2</cooldownTime>
+      </li>	  
+    </tools>
+  </ThingDef>
+  
+  <RecipeDef ParentName="AKN_BaseReinforceRecipe">
+    <defName>AKN_ReinforcePaxelII</defName>
+    <label>Forge Tartarite Reinforced Paxel(II)</label>
+    <description>Forge Tartarite Reinforced Paxel(II)</description>
+    <jobString>Forging Reinforced Paxel(II)</jobString>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <researchPrerequisites>
+	<li>AKN_TartariteReinforcement</li>
+	<li>LongBlades</li>
+	</researchPrerequisites>
+    <workAmount>53700</workAmount>	  
+    <ingredients>
+     <li>
+       <filter>
+         <thingDefs>
+            <li>AKN_TReinforcedPaxelI</li>
+         </thingDefs>
+       </filter>
+       <count>1</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_ReinforcedTartariteRing</li>			
+         </thingDefs>
+       </filter>
+       <count>2</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_Tartarite</li>			
+         </thingDefs>
+       </filter>
+       <count>60</count>
+     </li>	 	 
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>AKN_TReinforcedPaxelI</li>	  	
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_TReinforcedPaxelII>1</AKN_TReinforcedPaxelII>
+    </products>
+  </RecipeDef>  
+  
+  <ThingDef ParentName="AKN_BaseReinforcedWeapon">
+    <defName>AKN_TReinforcedPaxelIII</defName>
+    <label>Tartarite Reinforced Paxel(III)</label>
+    <techLevel>Medieval</techLevel>
+    <tradeability>Sellable</tradeability>
+    <description>Tartarite Reinforced Paxel(III)
+	
+A Paxel that had been reinforced even further. The main tool head has been reconstructed with additional reinforced rings that work to increase stability and decrease overall weight, leading to total efficency that surpasses even masterful designs.
+
+Some wonder if such a design can still be further improved upon.</description>	
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Paxel/AKN_PaxelReinforcedIII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>		
+    <costList>
+	  <AKN_TReinforcedPaxelII>1</AKN_TReinforcedPaxelII>
+	  <AKN_ReinforcedTartariteRing>2</AKN_ReinforcedTartariteRing>	  
+      <AKN_Tartarite>70</AKN_Tartarite>
+    </costList>
+    <statBases>	
+      <WorkToMake>63000</WorkToMake>
+      <Mass>4</Mass>
+      <MaxHitPoints>900</MaxHitPoints>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <Beauty>0</Beauty>
+    </statBases>
+	<equippedStatOffsets>
+      <MiningSpeed>0.33</MiningSpeed>
+	  <PlantWorkSpeed>0.33</PlantWorkSpeed>
+      <PlantHarvestYield>0.15</PlantHarvestYield>
+    </equippedStatOffsets>
+	<thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>	
+    <weaponTags>
+      <li>ChristalMeleeReinforced</li>
+    </weaponTags>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+     <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9.0</power>
+        <cooldownTime>2.0</cooldownTime>
+      </li>	 
+	  <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>40.0</power>	
+		<armorPenetration>0.65</armorPenetration>		
+        <cooldownTime>2.8</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>35</power>
+		<armorPenetration>0.75</armorPenetration>		
+        <cooldownTime>2.5</cooldownTime>
+      </li>		  
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>45</power>
+		<armorPenetration>0.50</armorPenetration>		
+        <cooldownTime>2.5</cooldownTime>
+      </li>	  
+    </tools>
+  </ThingDef>
+
+  <RecipeDef ParentName="AKN_BaseReinforceRecipe">
+    <defName>AKN_ReinforcePaxelIII</defName>
+    <label>Forge Tartarite Reinforced Paxel(III)</label>
+    <description>Forge Tartarite Reinforced Paxel(III)</description>
+    <jobString>Forging Reinforced Paxel(III)</jobString>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <researchPrerequisites>
+	<li>AKN_TartariteReinforcement</li>
+	<li>LongBlades</li>
+	</researchPrerequisites>
+    <workAmount>63000</workAmount>	  
+    <ingredients>
+     <li>
+       <filter>
+         <thingDefs>
+            <li>AKN_TReinforcedPaxelII</li>
+         </thingDefs>
+       </filter>
+       <count>1</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_ReinforcedTartariteRing</li>			
+         </thingDefs>
+       </filter>
+       <count>2</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_Tartarite</li>			
+         </thingDefs>
+       </filter>
+       <count>70</count>
+     </li>	 	 
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>AKN_TReinforcedPaxelII</li>	  	
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_TReinforcedPaxelIII>1</AKN_TReinforcedPaxelIII>
+    </products>
+  </RecipeDef>  
+
+</Defs>

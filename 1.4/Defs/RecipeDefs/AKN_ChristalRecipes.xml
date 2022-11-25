@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============================== Pre-Electric Smelting ===================================-->
+  <RecipeDef>
+    <defName>AKN_ExtractMetalFromSlagTedious</defName>
+    <label>smelt metal from slag</label>
+    <description>Extract useful metal from slag chunks by gradually burning away unwanted materials with controlled heat and tediously picking out useful remnants.</description>
+    <jobString>Smelting metal from slag.</jobString>
+    <workAmount>800</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ChunkSlagSteel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <Steel>15</Steel>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkSlagSteel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>AKN_SmeltWeaponTedious</defName>
+    <label>smelt weapon</label>
+    <description>Break down weapons into useful resources by gradually burning away unwanted materials with controlled heat and tediously picking out useful remnants.</description>
+    <jobString>Smelting weapon.</jobString>
+    <workAmount>3200</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <specialProducts>
+      <li>Smelted</li>
+    </specialProducts>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Weapons</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Weapons</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowNonSmeltableWeapons</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <forceHiddenSpecialFilters>
+      <li>AllowSmeltable</li>
+      <li>AllowBurnableWeapons</li>
+      <li>AllowNonBurnableWeapons</li>
+    </forceHiddenSpecialFilters>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>AKN_SmeltApparelTedious</defName>
+    <label>smelt apparel</label>
+    <description>Break down metallic apparel like armor into useful resources by gradually burning away unwanted materials with controlled heat and tediously picking out useful remnants.</description>
+    <jobString>Smelting apparel.</jobString>
+    <workAmount>3200</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <specialProducts>
+      <li>Smelted</li>
+    </specialProducts>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Apparel</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Apparel</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowNonSmeltableApparel</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <forceHiddenSpecialFilters>
+      <li>AllowSmeltableApparel</li>
+      <li>AllowBurnableApparel</li>
+      <li>AllowNonBurnableApparel</li>
+    </forceHiddenSpecialFilters>
+  </RecipeDef>
+
+  <!--=============================== Reinforced Barrel ===================================-->  
+  <RecipeDef>
+    <defName>AKN_MakeTartariteReinforcedBarrel</defName>
+    <label>make reinforced barrel</label>
+    <description>Make a reinforced barrel from tartarite.</description>
+    <jobString>Making Barrel.</jobString>
+    <workSpeedStat>AKN_ForgingSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workAmount>60000</workAmount>
+    <unfinishedThingDef>AKN_UnfinishedReinforce</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AKN_ReinforcedTartariteRing</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>AKN_ReinforcedTartariteRing</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ReinforcedBarrel>1</ReinforcedBarrel>
+    </products>
+    <skillRequirements>
+      <Crafting>5</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <researchPrerequisites>
+	  <li>AKN_TartariteReinforcement</li>
+	  <li>Mortars</li>
+	</researchPrerequisites>
+  </RecipeDef>  
+</Defs>  

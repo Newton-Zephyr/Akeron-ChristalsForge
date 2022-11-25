@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============================== Tartarite ===============================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>AKN_Tartarite</defName>
+    <label>tartarite</label>
+    <description>Dense, durable, and reliable. Tartarite alloy is a rather heavy but strong and versatile material made from various elements found in certain metal ores extracted and combined at extreme temperatures.
+
+Rather interestingly, the combination of these elements allows for much more useful and unique properties if forged with proper techniques.</description>
+    <graphicData>
+      <texPath>Things/Christal/Materials/AKN_Tartarite</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>	
+    <statBases>
+      <MarketValue>8</MarketValue>
+      <Mass>1.2</Mass>
+      <StuffPower_Armor_Sharp>1.10</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.60</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.00</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>0</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>3</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.2</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
+    </statBases>
+	<thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+	<burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+	<stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <appearance>Metal</appearance>
+      <commonality>0</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(51,46,46)</color>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>2.9</MaxHitPoints>
+        <Beauty>1</Beauty>
+        <Flammability>0</Flammability>
+        <WorkToMake>2.5</WorkToMake>
+        <WorkToBuild>2.5</WorkToBuild>
+        <MeleeWeapon_CooldownMultiplier>1.15</MeleeWeapon_CooldownMultiplier>
+		<DoorOpenSpeed>0.75</DoorOpenSpeed>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <allowedArchonexusCount>80</allowedArchonexusCount>
+  </ThingDef>	
+	
+  <!--=============================== Tartarite Recipies ===============================-->	 
+  <RecipeDef>
+    <defName>AKN_MakeTartariteAtSmithy</defName>
+    <label>make tartarite</label>
+    <description>Make tartarite alloy x50.</description>
+    <jobString>Making tartarite alloy.</jobString>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>3000</workAmount>
+    <recipeUsers>
+      <li>ElectricSmithy</li>
+      <li>FueledSmithy</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>35</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>0.5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>Gold</li>
+        <li>Uranium</li>
+		<li>Chemfuel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_Tartarite>50</AKN_Tartarite>
+    </products>
+    <researchPrerequisite>AKN_TartariteAlloying</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>4</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>AKN_MakeTartariteAtSmithingTable</defName>
+    <label>forge tartarite</label>
+    <description>Forge Tartarite alloy x50.</description>
+    <jobString>Forging Tartarite alloy.</jobString>
+    <workSpeedStat>AKN_ForgingSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>1500</workAmount>
+    <recipeUsers>
+      <li>AKN_FueledSmithingTable</li>
+	  <li>AKN_ElectricSmithingTable</li>	  
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>35</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>0.5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>Gold</li>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_Tartarite>50</AKN_Tartarite>
+    </products>
+    <researchPrerequisite>AKN_TartariteAlloying</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>4</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+
+  <!--=============================== Reinforced Tartarite Ring ===============================--> 
+  <ThingDef ParentName="ResourceBase">
+    <defName>AKN_ReinforcedTartariteRing</defName>
+    <label>reinforced tartarite ring</label>
+    <techLevel>Medieval</techLevel>	
+    <description>A ring of reinforced tartarite. The mechanics behind reinforced tartarite in this specific shape is invaluable as a component in many different reinforcement and construction designs.</description>
+    <graphicData>
+      <texPath>Things/Christal/Materials/AKN_ReinforcedRing</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <useHitPoints>false</useHitPoints>	
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>50</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>135</MarketValue>
+      <Mass>0.9</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+
+  <!--=============================== Reinforced Tartarite Ring Recipies ===============================-->	 
+  <RecipeDef>
+    <defName>AKN_MakeReinforcedTartariteRing</defName>
+    <label>forge reinforced tartarite ring</label>
+    <description>Forge reinforced tartarite ring.</description>
+    <jobString>Forging reinforced tartarite ring.</jobString>
+    <workSpeedStat>AKN_ForgingSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>4800</workAmount>
+    <recipeUsers>
+      <li>AKN_FueledSmithingTable</li>
+	  <li>AKN_ElectricSmithingTable</li>	  
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AKN_Tartarite</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>AKN_Tartarite</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_ReinforcedTartariteRing>1</AKN_ReinforcedTartariteRing>
+    </products>
+    <researchPrerequisite>AKN_TartariteReinforcement</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>5</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <!--=============================== Scorched Tartarite ===============================--> 
+  <ThingDef ParentName="ResourceBase">
+    <defName>AKN_ScorchedTartarite</defName>
+    <label>scorched tartarite</label>
+    <techLevel>Medieval</techLevel>	
+    <description>Scorched tartarite suits as a devastating projectile that shatters into hot sharp fragments upon impact with a target.
+
+Production however, is an extremely tedious task that requires constant monitoring throughout the entire process of gradually and methodically cooling molten tartarite all the way to room temperature, with most of the material being lost in the production due to its volatile nature.</description>
+    <tickerType>Normal</tickerType>    
+	<graphicData>
+      <texPath>Things/Christal/Materials/AKN_ScorchedTartarite</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>15</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>140</MarketValue>
+      <Mass>1</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>3</DeteriorationRate>	  
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeability>Sellable</tradeability>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>0.5</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.05</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.4</startWickHitPointsPercent>
+        <preExplosionSpawnThingDef>Filth_Ash</preExplosionSpawnThingDef>
+        <preExplosionSpawnChance>0.8</preExplosionSpawnChance>
+        <wickTicks>10~70</wickTicks>
+      </li>
+    </comps>
+    <allowedArchonexusCount>15</allowedArchonexusCount>	
+  </ThingDef>
+  
+  <!--=============================== Scorched Tartarite Recipies ===============================-->	 
+  <RecipeDef>
+    <defName>AKN_MakeScorchedTartarite</defName>
+    <label>forge scorched tartarite</label>
+    <description>Forge scorched tartarite.</description>
+    <jobString>Forging scorched tartarite.</jobString>
+    <workSpeedStat>AKN_ForgingSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>10200</workAmount>
+    <recipeUsers>
+      <li>AKN_FueledSmithingTable</li>
+	  <li>AKN_ElectricSmithingTable</li>	  
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AKN_Tartarite</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>AKN_Tartarite</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_ScorchedTartarite>1</AKN_ScorchedTartarite>
+    </products>
+    <researchPrerequisite>AKN_TartariteScorching</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>6</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>  
+</Defs> 

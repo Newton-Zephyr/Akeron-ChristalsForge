@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+<!--=============================== Table Linking ===================================-->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="FueledSmithy"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+        <value>
+			<li>AKN_FueledSmithingTable</li>
+			<li>AKN_TartaritePowerHammer</li>
+        </value>
+    </Operation>
+	
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="ElectricSmithy"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+        <value>
+			<li>AKN_ElectricSmithingTable</li>
+			<li>AKN_TartaritePowerHammer</li>
+        </value>
+    </Operation>	
+	
+<!--=============================== Smithy Linking ===================================-->
+	
+	<Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="FueledSmithy" or defName="ElectricSmithy"]/comps</xpath>
+        <value>
+			<li Class="CompProperties_Facility">
+              <statOffsets>
+                <WorkTableWorkSpeedFactor>0.10</WorkTableWorkSpeedFactor>
+              </statOffsets>
+              <maxSimultaneous>1</maxSimultaneous>
+              <maxDistance>5</maxDistance>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>	
+	

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+<!--=============================== Cross-Loading (VWE) ===================================-->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AKN_CrossLoadingSpot"]/recipes</xpath>
+        <value>
+		  <li>AKN_LoadKnifeCrossBolter</li>
+		  <li>AKN_UnloadKnifeCrossBolter</li>
+		  <li>AKN_LoadRockCrossBolter</li>
+		  <li>AKN_UnloadRockCrossBolter</li>
+        </value>
+    </Operation>
+	
+</Patch>	

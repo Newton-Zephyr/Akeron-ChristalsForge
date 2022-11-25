@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============================== Pillage Bolter ===============================-->
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>AKN_PillageBolter</defName>
+    <label>Pillage Bolter</label>
+    <techLevel>Medieval</techLevel>	
+    <tradeability>Sellable</tradeability>	
+    <description>A modified crossbow adapted from pillagers, whose design allowed for the reliable use of any ammo that fit within its rail, like those salvaged from their victims such as shortbow arrows.</description>
+    <recipeMaker>
+      <researchPrerequisite>AKN_PillageBolterRS</researchPrerequisite>	
+      <recipeUsers>
+		<li>AKN_FueledSmithingTable</li>
+		<li>AKN_ElectricSmithingTable</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>	  
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Bolter/AKN_PillageBolter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>	
+    <soundInteract>Bow_Small</soundInteract>
+    <costList>
+      <WoodLog>60</WoodLog>
+	  <Steel>15</Steel>
+	  <Cloth>15</Cloth>
+    </costList>
+    <statBases>
+      <WorkToMake>21000</WorkToMake>
+      <Mass>2</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.60</AccuracyMedium>
+      <AccuracyLong>0.50</AccuracyLong>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>ChristalRangedBasic</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>AKN_PillageBolterArrow</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>20</range>
+        <soundCast>Bow_Small</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+	
+	<modExtensions>
+      <li Class="VFECore.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>	
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>AKN_PillageBolterArrow</defName>
+    <label>pillage arrow</label>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+	  <flyOverhead>false</flyOverhead>
+      <damageDef>Arrow</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <stoppingPower>1</stoppingPower>	
+	  <armorPenetrationBase>0.35</armorPenetrationBase>	  
+      <speed>60</speed>
+    </projectile>
+  </ThingDef>
+
+    <!--=============================== Cross Bolter ===============================-->
+  <ThingDef ParentName="AKN_BaseCrossBolter">
+    <defName>AKN_CrossBolter</defName>
+    <label>Cross Bolter</label>
+    <techLevel>Medieval</techLevel>	
+    <tradeability>Sellable</tradeability>	
+    <description>A greatly reinforced variant of the Pillage Bolter, now fitted with four arms and tartarite reinforced mechanisms that aid in reloading at the cost of its increased weight, slightly hindering aiming time. Such a design can easily be used to launch any projectile one could fit in its rail.
+	
+By default the Cross Bolter is designed to fire heavy tartartite bolts capable of crippling large beasts and punching through solid armor at a distance away.</description>
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Bolter/AKN_CrossBolter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>	
+    <costList>
+      <WoodLog>60</WoodLog>
+	  <Cloth>20</Cloth>	  
+	  <AKN_Tartarite>55</AKN_Tartarite>
+	  <AKN_ReinforcedTartariteRing>3</AKN_ReinforcedTartariteRing>
+    </costList>
+    <statBases>
+      <WorkToMake>84000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.35</AccuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.60</AccuracyLong>
+      <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>AKN_CrossBolterBolt</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <range>30.9</range>
+        <soundCast>Bow_Large</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>3</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>AKN_CrossBolterBolt</defName>
+    <label>tartarite bolt</label>
+    <graphicData>
+      <texPath>Things/Christal/Projectile/AKN_TartariteBolt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+	  <flyOverhead>false</flyOverhead>
+      <damageDef>Arrow</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <stoppingPower>2.5</stoppingPower>	
+	  <armorPenetrationBase>0.50</armorPenetrationBase>	  
+      <speed>65</speed>
+    </projectile>
+  </ThingDef>
+  
+  <RecipeDef ParentName="AKN_BaseReinforceRecipe">
+    <defName>AKN_MakeCrossBolter</defName>
+    <label>Forge Cross Bolter</label>
+    <description>Forge Cross Bolter</description>
+    <jobString>Forging Cross Bolter</jobString>
+    <skillRequirements>
+      <Crafting>9</Crafting>
+    </skillRequirements>
+    <researchPrerequisites>
+	<li>AKN_CrossBolterRS</li>
+	</researchPrerequisites>
+    <workAmount>84000</workAmount>	  
+    <ingredients>
+     <li>
+        <filter>
+          <thingDefs>
+            <li>AKN_PillageBolter</li>			
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+     <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>			
+          </thingDefs>
+        </filter>
+        <count>60</count>
+      </li>
+     <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>			
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+     <li>
+        <filter>
+          <thingDefs>
+            <li>AKN_Tartarite</li>			
+          </thingDefs>
+        </filter>
+        <count>55</count>
+      </li>
+     <li>
+        <filter>
+          <thingDefs>
+            <li>AKN_ReinforcedTartariteRing</li>			
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>	  
+    </ingredients>
+    <products>
+      <AKN_CrossBolter>1</AKN_CrossBolter>
+    </products>
+  </RecipeDef>   
+  
+    <!--=============================== Cross Bolter w/Scorched ===============================-->    
+  <ThingDef ParentName="AKN_BaseCrossBolter">
+    <defName>AKN_ScorchedCrossBolter</defName>
+    <label>Cross Bolter (Scorched)</label>
+    <techLevel>Medieval</techLevel>	
+    <tradeability>Sellable</tradeability>	
+    <description>A greatly reinforced variant of the Pillage Bolter, now fitted with four arms and tartarite reinforced mechanisms that aid in reloading at the cost of its increased weight, slightly hindering aiming time. Such a design can easily be used to launch any projectile one could fit in its rail.
+	
+This one has been loaded with scorched tartarite which shatters violently on impact slinging hot razor sharp fragments all around the impact area. Extra care has to be taken while loading the projectiles as to not damage the weapon or user.</description>
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Bolter/AKN_CrossBolter_Scorched</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>	
+    <costList>
+      <AKN_CrossBolter>1</AKN_CrossBolter>
+      <AKN_ScorchedTartarite>1</AKN_ScorchedTartarite>
+    </costList>
+	<smeltable>false</smeltable>	
+    <statBases>
+      <WorkToMake>60</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.35</AccuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.60</AccuracyLong>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>AKN_CrossBolterFlyingScorched</defaultProjectile>
+        <forcedMissRadius>0.01</forcedMissRadius>
+        <warmupTime>2.5</warmupTime>
+        <range>30.9</range>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>		
+        <soundCast>Bow_Large</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <noiseRadius>4</noiseRadius>		
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>3</cooldownTime>
+      </li>
+    </tools>	
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>AKN_CrossBolterFlyingScorched</defName>
+    <label>scorched tartarite bolt</label>
+    <graphicData>
+      <texPath>Things/Christal/Projectile/AKN_ScorchedTartariteBolt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>	
+    <projectile>
+      <explosionRadius>1.1</explosionRadius>	
+      <flyOverhead>false</flyOverhead>
+      <damageDef>ScorchedT_Blast</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+	  <armorPenetrationBase>0.45</armorPenetrationBase>  
+      <speed>65</speed>
+    </projectile>
+  </ThingDef>
+    	
+  <!--=============================== Load Crossbolter w/Scorched ===================================-->
+  <RecipeDef>
+    <defName>AKN_LoadScorchedCrossBolter</defName>
+    <label>load scorched tartarite into Cross Bolter</label>
+    <description>Load scorched tartarite into Cross Bolter</description>
+    <jobString>Loading Cross Bolter.</jobString>
+    <workSpeedStat>AKN_ForgingSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workAmount>60</workAmount>
+	<useIngredientsForColor>false</useIngredientsForColor>	
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AKN_ScorchedTartarite</li>			
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+     <li>
+        <filter>
+          <thingDefs>
+            <li>AKN_CrossBolter</li>			
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>	  
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>AKN_ScorchedTartarite</li>	
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_ScorchedCrossBolter>1</AKN_ScorchedCrossBolter>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+  <!--=============================== Unload Crossbolter w/Scorched ===================================-->
+  <RecipeDef>
+    <defName>AKN_UnloadScorchedCrossBolter</defName>
+    <label>unload scorched tartarite from Cross Bolter</label>
+    <description>Unload scorched tartarite from Cross Bolter</description>
+    <jobString>Unloading Cross Bolter.</jobString>
+    <workSpeedStat>AKN_ForgingSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workAmount>60</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AKN_ScorchedCrossBolter</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>AKN_ScorchedCrossBolter</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_CrossBolter>1</AKN_CrossBolter>
+      <AKN_ScorchedTartarite>1</AKN_ScorchedTartarite>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+</Defs>  

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============================== Reinforced Longsword ===============================-->
+  <ThingDef ParentName="AKN_BaseReinforcedWeapon">
+    <defName>AKN_TReinforcedLongswordI</defName>
+    <label>Tartarite Reinforced Longsword(I)</label>
+    <techLevel>Medieval</techLevel>
+    <tradeability>Sellable</tradeability>
+    <description>Tartarite Reinforced Longsword(I)
+	
+A longsword with a reinforced tatarite design. Reliably crafted with denser, more durable materials that allow for increased performance among standard designs.
+
+Can be further improved upon via additional reinforcement.</description>	
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Longsword/AKN_LongswordReinforcedI</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>		
+    <costList>
+      <AKN_Tartarite>100</AKN_Tartarite>
+	  <WoodLog>10</WoodLog>
+    </costList>
+    <statBases>	
+      <WorkToMake>54000</WorkToMake>
+      <Mass>4.5</Mass>
+      <MaxHitPoints>400</MaxHitPoints>
+      <DeteriorationRate>1.5</DeteriorationRate>
+      <Beauty>0</Beauty>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>	
+    <weaponTags>
+      <li>ChristalMeleeReinforced</li>
+    </weaponTags>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2.3</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>34</power>
+		<armorPenetration>0.47</armorPenetration>			
+        <cooldownTime>3</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>34</power>
+		<armorPenetration>0.47</armorPenetration>		
+        <cooldownTime>3</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <RecipeDef ParentName="AKN_BaseReinforceRecipe">
+    <defName>AKN_ReinforceLongswordI</defName>
+    <label>Forge Tartarite Reinforced Longsword(I)</label>
+    <description>Forge Tartarite Reinforced Longsword(I)</description>
+    <jobString>Forging Reinforced Longsword(I)</jobString>
+    <skillRequirements>
+      <Crafting>5</Crafting>
+    </skillRequirements>
+    <researchPrerequisites>
+	<li>AKN_TartariteReinforcement</li>
+	<li>LongBlades</li>
+	</researchPrerequisites>
+    <workAmount>54000</workAmount>	  
+    <ingredients>
+     <li>
+       <filter>
+         <thingDefs>
+            <li>MeleeWeapon_LongSword</li>
+         </thingDefs>
+       </filter>
+       <count>1</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_Tartarite</li>			
+         </thingDefs>
+       </filter>
+       <count>100</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>WoodLog</li>			
+         </thingDefs>
+       </filter>
+       <count>10</count>
+     </li>	 	 
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MeleeWeapon_LongSword</li>	  	
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_TReinforcedLongswordI>1</AKN_TReinforcedLongswordI>
+    </products>
+  </RecipeDef>  
+  
+  <ThingDef ParentName="AKN_BaseReinforcedWeapon">
+    <defName>AKN_TReinforcedLongswordII</defName>
+    <label>Tartarite Reinforced Longsword(II)</label>
+    <techLevel>Medieval</techLevel>
+    <tradeability>Sellable</tradeability>
+    <description>Tartarite Reinforced Longsword(II)
+
+A longsword that had been further reinforced. Much of the material has been redistributed along with the introduction of the adjustable tartarite rings for the ability to rebalance the tool at any given moment, allowing for an increased speed that surpasses even quality designs.
+
+Can be further improved upon via additional reinforcement.</description>	
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Longsword/AKN_LongswordReinforcedII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>		
+    <costList>
+	  <AKN_TReinforcedLongswordI>1</AKN_TReinforcedLongswordI>
+	  <AKN_ReinforcedTartariteRing>1</AKN_ReinforcedTartariteRing>	  
+      <AKN_Tartarite>75</AKN_Tartarite>
+    </costList>
+    <statBases>
+      <WorkToMake>54000</WorkToMake>	
+      <Mass>4.5</Mass>
+      <MaxHitPoints>500</MaxHitPoints>
+      <DeteriorationRate>1.2</DeteriorationRate>
+      <Beauty>0</Beauty>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>	
+    <weaponTags>
+      <li>ChristalMeleeReinforced</li>
+    </weaponTags>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2.0</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>35</power>
+		<armorPenetration>0.55</armorPenetration>		
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>35</power>
+		<armorPenetration>0.55</armorPenetration>		
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <RecipeDef ParentName="AKN_BaseReinforceRecipe">
+    <defName>AKN_ReinforceLongswordII</defName>
+    <label>Forge Tartarite Reinforced Longsword(II)</label>
+    <description>Forge Tartarite Reinforced Longsword(II)</description>
+    <jobString>Forging Reinforced Longsword(II)</jobString>
+    <skillRequirements>
+      <Crafting>7</Crafting>
+    </skillRequirements>
+    <researchPrerequisites>
+	<li>AKN_TartariteReinforcement</li>
+	<li>LongBlades</li>
+	</researchPrerequisites>
+    <workAmount>54000</workAmount>	  
+    <ingredients>
+     <li>
+       <filter>
+         <thingDefs>
+            <li>AKN_TReinforcedLongswordI</li>
+         </thingDefs>
+       </filter>
+       <count>1</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_ReinforcedTartariteRing</li>			
+         </thingDefs>
+       </filter>
+       <count>1</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_Tartarite</li>			
+         </thingDefs>
+       </filter>
+       <count>75</count>
+     </li>	 	 
+    </ingredients>
+    <products>
+      <AKN_TReinforcedLongswordII>1</AKN_TReinforcedLongswordII>
+    </products>
+  </RecipeDef>  
+  
+  <ThingDef ParentName="AKN_BaseReinforcedWeapon">
+    <defName>AKN_TReinforcedLongswordIII</defName>
+    <label>Tartarite Reinforced Longsword(III)</label>
+    <techLevel>Medieval</techLevel>
+    <tradeability>Sellable</tradeability>
+    <description>Tartarite Reinforced Longsword(III)
+	
+A longsword that had been reinforced even further. The main tool head has been reconstructed with additional reinforced rings that work to increase stability and decrease overall weight, leading to total efficency that surpasses even masterful designs.
+
+Some wonder if such a design can still be further improved upon.</description>
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Longsword/AKN_LongswordReinforcedIII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>		
+    <costList>
+	  <AKN_TReinforcedLongswordII>1</AKN_TReinforcedLongswordII>
+	  <AKN_ReinforcedTartariteRing>2</AKN_ReinforcedTartariteRing>	  
+      <AKN_Tartarite>85</AKN_Tartarite>
+    </costList>
+    <statBases>	
+      <WorkToMake>66000</WorkToMake>	
+      <Mass>4</Mass>
+      <MaxHitPoints>600</MaxHitPoints>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <Beauty>0</Beauty>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>	
+    <weaponTags>
+      <li>ChristalMeleeReinforced</li>
+    </weaponTags>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>42</power>
+		<armorPenetration>0.65</armorPenetration>		
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>42</power>
+		<armorPenetration>0.65</armorPenetration>		
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <RecipeDef ParentName="AKN_BaseReinforceRecipe">
+    <defName>AKN_ReinforceLongswordIII</defName>
+    <label>Forge Tartarite Reinforced Longsword(III)</label>
+    <description>Forge Tartarite Reinforced Longsword(III)</description>
+    <jobString>Forging Reinforced Longsword(III)</jobString>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <researchPrerequisites>
+	<li>AKN_TartariteReinforcement</li>
+	<li>LongBlades</li>
+	</researchPrerequisites>
+    <workAmount>66000</workAmount>	  
+    <ingredients>
+     <li>
+       <filter>
+         <thingDefs>
+            <li>AKN_TReinforcedLongswordII</li>
+         </thingDefs>
+       </filter>
+       <count>1</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_ReinforcedTartariteRing</li>			
+         </thingDefs>
+       </filter>
+       <count>2</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_Tartarite</li>			
+         </thingDefs>
+       </filter>
+       <count>85</count>
+     </li>	 	 
+    </ingredients>
+    <products>
+      <AKN_TReinforcedLongswordIII>1</AKN_TReinforcedLongswordIII>
+    </products>
+  </RecipeDef>
+  
+</Defs>

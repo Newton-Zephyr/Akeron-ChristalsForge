@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============================== Unfinished Reinforced ===============================-->
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>AKN_UnfinishedReinforce</defName>
+    <label>Unfinished Reinforce</label>
+    <description>An unfinished tartarite reinforced product</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <DeteriorationRate>1.0</DeteriorationRate>	
+      <Flammability>0</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Christal/Unfinished/AKN_UnfinishedReinforce</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories Inherit="false" />
+  </ThingDef> 
+</Defs>

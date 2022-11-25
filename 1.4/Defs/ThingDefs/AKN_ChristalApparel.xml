@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <!--=============================== Heavy Apron ===============================-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>AKN_HeavyApron</defName>
+    <label>Heavy Apron</label>
+	<techLevel>Medieval</techLevel>
+    <description>A thick and rigid safety apron held up with a handy toolbelt and made with a heat-resistant inner lining.
+
+An apron like this is perfect for the harsh environment of tartarite metal-working, but is also equip-able for all kinds of jobs, hazardous or not.</description>
+	<recipeMaker>
+      <recipeUsers Inherit="False">
+		<li>AKN_FueledSmithingTable</li>
+		<li>AKN_ElectricSmithingTable</li>
+	  </recipeUsers>
+      <skillRequirements>
+	    <Crafting>6</Crafting>
+	  </skillRequirements>		  
+      <researchPrerequisites>
+	  <li>AKN_TartariteAssistance</li>		  
+	  <li>ComplexClothing</li>  
+	  </researchPrerequisites>	  
+	</recipeMaker>
+	<graphicData>
+	  <texPath>Things/Christal/Apparel/HeavyApron/Preview/AKN_HeavyApron_Preview</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+	<stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+	<costStuffCount>40</costStuffCount>	
+    <costList>
+	  <DevilstrandCloth>20</DevilstrandCloth>
+      <Steel>10</Steel>
+    </costList>	
+	<statBases>
+	  <MaxHitPoints>130</MaxHitPoints>
+	  <WorkToMake>4200</WorkToMake>
+	  <Mass>4</Mass>
+      <Flammability>0.5</Flammability>		  
+	  <StuffEffectMultiplierArmor>0.25</StuffEffectMultiplierArmor>
+	  <StuffEffectMultiplierInsulation_Cold>0.05</StuffEffectMultiplierInsulation_Cold>
+	  <StuffEffectMultiplierInsulation_Heat>0.20</StuffEffectMultiplierInsulation_Heat>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.40</ArmorRating_Heat>
+      <Insulation_Heat>10</Insulation_Heat>	  
+      <DeteriorationRate>2</DeteriorationRate>	  
+	  <EquipDelay>2.0</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+	  <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+	  <SmeltingSpeed>0.10</SmeltingSpeed>
+	  <AKN_ForgingSpeed>0.10</AKN_ForgingSpeed>
+      <MoveSpeed>-0.1</MoveSpeed>	  
+	</equippedStatOffsets>
+	<thingCategories Inherit='False'>
+	  <li>Apparel</li>
+	</thingCategories>	
+    <apparel>
+	  <bodyPartGroups>
+	    <li>Neck</li>		
+		<li>Torso</li>
+		<li>Legs</li>
+	  </bodyPartGroups>
+	   <wornGraphicPath>Things/Christal/Apparel/HeavyApron/AKN_HeavyApron</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags Inherit='False'>
+        <li>AKN_ChristalApparel</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+	<colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+</Defs>	

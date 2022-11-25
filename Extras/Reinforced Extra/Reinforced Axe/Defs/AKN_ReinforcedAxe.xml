@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============================== Reinforced Axe ===============================-->
+  <ThingDef ParentName="AKN_BaseReinforcedWeapon">
+    <defName>AKN_TReinforcedAxeI</defName>
+    <label>Tartarite Reinforced Axe(I)</label>
+    <techLevel>Medieval</techLevel>
+    <tradeability>Sellable</tradeability>
+    <description>Tartarite Reinforced Axe(I)
+	
+A one handed axe with a reinforced tatarite design that includes a small adze to for stripping bark among other uses. Reliably crafted with denser, more durable materials that allow for increased performance among standard designs.
+
+Can be further improved upon via additional reinforcement.</description>	
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Axe/AKN_AxeReinforcedI</texPath>
+      <graphicClass>Graphic_Single</graphicClass>	  
+    </graphicData>		
+    <costList>
+      <AKN_Tartarite>50</AKN_Tartarite>
+	  <WoodLog>10</WoodLog>
+    </costList>
+    <statBases>	
+      <WorkToMake>21000</WorkToMake>
+      <Mass>2.25</Mass>
+      <MaxHitPoints>400</MaxHitPoints>
+      <DeteriorationRate>1.5</DeteriorationRate>
+      <Beauty>0</Beauty>
+    </statBases>
+    <equippedStatOffsets>
+      <PlantHarvestYield>0.07</PlantHarvestYield>
+      <PlantWorkSpeed>0.15</PlantWorkSpeed>
+    </equippedStatOffsets>		
+	<thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>	
+    <weaponTags>
+      <li>ChristalMeleeReinforced</li>
+    </weaponTags>
+    <equippedAngleOffset>-75</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2.3</cooldownTime>
+      </li>
+      <li>
+        <label>adze</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>2.3</cooldownTime>
+      </li>	 	  
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>21</power>
+        <cooldownTime>2.3</cooldownTime>
+      </li>
+    </tools>
+	
+	<modExtensions>
+      <li Class="VFECore.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>		
+  </ThingDef>
+  
+  <RecipeDef ParentName="AKN_BaseReinforceRecipe">
+    <defName>AKN_ReinforceAxeI</defName>
+    <label>Forge Tartarite Reinforced Axe(I)</label>
+    <description>Forge Tartarite Reinforced Axe(I)</description>
+    <jobString>Forging Reinforced Axe(I)</jobString>
+    <skillRequirements>
+      <Crafting>4</Crafting>
+    </skillRequirements>
+    <researchPrerequisites>
+	<li>AKN_TartariteReinforcement</li>
+	</researchPrerequisites>
+    <workAmount>21000</workAmount>
+    <ingredients>
+     <li>
+       <filter>
+         <thingDefs>
+            <li MayRequire="Ludeon.RimWorld.Royalty">MeleeWeapon_Axe</li>
+            <li MayRequire="VanillaExpanded.VWE">VWE_MeleeWeapon_Axe</li>
+            <li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_MeleeWeapon_Handaxe</li>			
+         </thingDefs>
+       </filter>
+       <count>1</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_Tartarite</li>			
+         </thingDefs>
+       </filter>
+       <count>50</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>WoodLog</li>			
+         </thingDefs>
+       </filter>
+       <count>10</count>
+     </li>	 	 
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li MayRequire="Ludeon.RimWorld.Royalty">MeleeWeapon_Axe</li>
+        <li MayRequire="VanillaExpanded.VWE">VWE_MeleeWeapon_Axe</li>	
+        <li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_MeleeWeapon_Handaxe</li>		
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_TReinforcedAxeI>1</AKN_TReinforcedAxeI>
+    </products>
+  </RecipeDef>
+  
+  <ThingDef ParentName="AKN_BaseReinforcedWeapon">
+    <defName>AKN_TReinforcedAxeII</defName>
+    <label>Tartarite Reinforced Axe(II)</label>
+    <techLevel>Medieval</techLevel>
+    <tradeability>Sellable</tradeability>
+    <description>Tartarite Reinforced Axe(II)
+
+A axe that had been further reinforced. Much of the material has been redistributed along with the introduction of the adjustable tartarite rings for the ability to rebalance the tool at any given moment, allowing for an increased speed that surpasses even quality designs.
+
+Can be further improved upon via additional reinforcement.</description>	
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Axe/AKN_AxeReinforcedII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>	  
+    </graphicData>		
+    <costList>
+	  <AKN_TReinforcedAxeI>1</AKN_TReinforcedAxeI>	
+	  <AKN_ReinforcedTartariteRing>1</AKN_ReinforcedTartariteRing>	
+      <AKN_Tartarite>50</AKN_Tartarite>
+    </costList>
+    <statBases>	
+      <WorkToMake>21000</WorkToMake>
+      <Mass>2.25</Mass>
+      <MaxHitPoints>500</MaxHitPoints>
+      <DeteriorationRate>1.2</DeteriorationRate>
+      <Beauty>0</Beauty>
+    </statBases>
+    <equippedStatOffsets>
+      <PlantHarvestYield>0.10</PlantHarvestYield>
+      <PlantWorkSpeed>0.20</PlantWorkSpeed>
+    </equippedStatOffsets>	
+	<thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>	
+    <weaponTags>
+      <li>ChristalMeleeReinforced</li>
+    </weaponTags>
+    <equippedAngleOffset>-75</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+      <li>
+        <label>adze</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>	 	  
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>21</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+	
+	<modExtensions>
+      <li Class="VFECore.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>		
+  </ThingDef>
+  
+  <RecipeDef ParentName="AKN_BaseReinforceRecipe">
+    <defName>AKN_ReinforceAxeII</defName>
+    <label>Forge Tartarite Reinforced Axe(II)</label>
+    <description>Forge Tartarite Reinforced Axe(II)</description>
+    <jobString>Forging Reinforced Axe(II)</jobString>
+    <skillRequirements>
+      <Crafting>5</Crafting>
+    </skillRequirements>
+    <researchPrerequisites>
+	<li>AKN_TartariteReinforcement</li>
+	</researchPrerequisites>
+    <workAmount>21000</workAmount>	  
+    <ingredients>
+     <li>
+       <filter>
+         <thingDefs>
+            <li>AKN_TReinforcedAxeI</li>
+         </thingDefs>
+       </filter>
+       <count>1</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_ReinforcedTartariteRing</li>			
+         </thingDefs>
+       </filter>
+       <count>1</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_Tartarite</li>			
+         </thingDefs>
+       </filter>
+       <count>50</count>
+     </li>	 	 
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>AKN_TReinforcedAxeI</li>		
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_TReinforcedAxeI>1</AKN_TReinforcedAxeI>
+    </products>
+  </RecipeDef>
+  
+  <ThingDef ParentName="AKN_BaseReinforcedWeapon">
+    <defName>AKN_TReinforcedAxeIII</defName>
+    <label>Tartarite Reinforced Axe(III)</label>
+    <techLevel>Medieval</techLevel>
+    <tradeability>Sellable</tradeability>
+    <description>Tartarite Reinforced Axe(III)
+	
+An axe that had been reinforced even further. The main tool head has been reconstructed with additional reinforced rings that work to increase stability and decrease overall weight, leading to total efficency that surpasses even masterful designs.
+
+Some wonder if such a design can still be further improved upon..</description>	
+    <graphicData>
+      <texPath>Things/Christal/Weapons/Axe/AKN_AxeReinforcedIII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>	  
+    </graphicData>		
+    <costList>
+	  <AKN_TReinforcedAxeII>1</AKN_TReinforcedAxeII>	
+	  <AKN_ReinforcedTartariteRing>1</AKN_ReinforcedTartariteRing>	
+      <AKN_Tartarite>50</AKN_Tartarite>
+    </costList>
+    <statBases>	
+      <WorkToMake>22200</WorkToMake>
+      <Mass>2.0</Mass>
+      <MaxHitPoints>600</MaxHitPoints>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <Beauty>0</Beauty>
+    </statBases>
+    <equippedStatOffsets>
+      <PlantHarvestYield>0.15</PlantHarvestYield>
+      <PlantWorkSpeed>0.33</PlantWorkSpeed>
+    </equippedStatOffsets>	
+	<thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>	
+    <weaponTags>
+      <li>ChristalMeleeReinforced</li>
+    </weaponTags>
+    <equippedAngleOffset>-75</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>22</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+      <li>
+        <label>adze</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>23</power>
+        <cooldownTime>1.75</cooldownTime>
+      </li>	  
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>30</power>
+		<armorPenetration>0.45</armorPenetration>		
+        <cooldownTime>1.75</cooldownTime>
+      </li>
+    </tools>
+	
+	<modExtensions>
+      <li Class="VFECore.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>		
+  </ThingDef>
+  
+  <RecipeDef ParentName="AKN_BaseReinforceRecipe">
+    <defName>AKN_ReinforceAxeIII</defName>
+    <label>Forge Tartarite Reinforced Axe(III)</label>
+    <description>Forge Tartarite Reinforced Axe(III)</description>
+    <jobString>Forging Reinforced Axe(III)</jobString>
+    <skillRequirements>
+      <Crafting>6</Crafting>
+    </skillRequirements>
+    <researchPrerequisites>
+	<li>AKN_TartariteReinforcement</li>
+	</researchPrerequisites>
+    <workAmount>22200</workAmount>	  
+    <ingredients>
+     <li>
+       <filter>
+         <thingDefs>
+            <li>AKN_TReinforcedAxeII</li>
+         </thingDefs>
+       </filter>
+       <count>1</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_ReinforcedTartariteRing</li>			
+         </thingDefs>
+       </filter>
+       <count>1</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_Tartarite</li>			
+         </thingDefs>
+       </filter>
+       <count>50</count>
+     </li>	 	 
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>AKN_TReinforcedAxeII</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_TReinforcedAxeIII>1</AKN_TReinforcedAxeIII>
+    </products>
+  </RecipeDef>
+
+</Defs>

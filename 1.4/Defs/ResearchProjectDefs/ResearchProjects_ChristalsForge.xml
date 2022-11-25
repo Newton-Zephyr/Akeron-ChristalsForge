@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchTabDef>
+    <defName>AKN_CaretakerCreations</defName>
+    <label>Caretaker Creations</label>
+  </ResearchTabDef>
+
+  <!--=============================== Tartarite Alloying ===================================-->
+  <ResearchProjectDef>
+    <defName>AKN_TartariteAlloying</defName>
+    <label>Tartarite Alloying</label>
+    <description>Looking into written tales that contain fantastical metals forged by cursed smiths in various depictions of the underworld, your smiths might be able to come up with something that comes close! But one does wonder where such tales came from and why they contained so much detail relating to the manufacturing of metals?</description>
+    <baseCost>700</baseCost>
+    <techLevel>Medieval</techLevel>
+	<prerequisites>
+	  <li>PassiveCooler</li>	
+	  <li>Smithing</li>
+	</prerequisites>
+    <researchViewX>0</researchViewX>
+    <researchViewY>1</researchViewY>
+    <tab>AKN_CaretakerCreations</tab>	
+  </ResearchProjectDef>
+  
+  <!--=============================== Tartarite Reinforcement ===================================-->
+  <ResearchProjectDef>
+    <defName>AKN_TartariteReinforcement</defName>
+    <label>Tartarite Reinforcement</label>
+    <description>Reinforce equipment with tartarite from the ground up, first by deconstructing it to use as a base, then using various smithing techniques, such as extreme temperatures to utilise the unique molecular properties of tartarite.
+
+Due to the properties of reinforced tartarite, the reinforced designs can only be properly made by following a strict, fully researched blueprint that results in an overall improved, consistent quality in each and every production that can often be further improved upon.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Medieval</techLevel>
+	<prerequisites>
+	  <li>AKN_TartariteAlloying</li>
+	</prerequisites>
+    <researchViewX>1</researchViewX>
+    <researchViewY>1</researchViewY>
+    <tab>AKN_CaretakerCreations</tab>		
+  </ResearchProjectDef>
+  
+  <!--=============================== Tartarite Assistance ===================================-->
+  <ResearchProjectDef>
+    <defName>AKN_TartariteAssistance</defName>
+    <label>Tartarite Assistance</label>
+    <description>"Necessity is the mother of invention"- A quote that encompasses one of humanities greatest drives.
+	
+As one expands their use of tartarite's benefits it basically becomes a nessesity to invent methods that assist in counteracting its drawbacks.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Medieval</techLevel>
+	<prerequisites>
+	  <li>AKN_TartariteAlloying</li>
+	</prerequisites>
+    <researchViewX>1</researchViewX>
+    <researchViewY>0.5</researchViewY>
+    <tab>AKN_CaretakerCreations</tab>		
+  </ResearchProjectDef>
+  
+  <!--=============================== Tartarite Scorching ===================================-->
+  <ResearchProjectDef>
+    <defName>AKN_TartariteScorching</defName>
+    <label>Tartarite Scorching</label>
+    <description>Scorched Tartarite possesses a few properties; one of which is that it is quite a brittle metal, and another, more unique property is its ability to heat up dramatically when under the effects of friction, with this effect capable of burning a person by simply scratching it with their fingernails.
+	
+Use of this material requires knowlage of proper handling and maintenance techniques.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Medieval</techLevel>
+	<prerequisites>
+	  <li>AKN_TartariteReinforcement</li>
+	</prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>1</researchViewY>
+    <tab>AKN_CaretakerCreations</tab>
+  </ResearchProjectDef>  
+  
+  <!--=============================== Pillage Bolter ===================================-->
+  <ResearchProjectDef>
+    <defName>AKN_PillageBolterRS</defName>
+    <label>Pillage Bolter</label>
+    <description>The Pillage Bolter's name and design were adapted from pillagers that originated from exiles or escaped convicts. It was essentially a minitureised recurve bow that had been affixed to an easy to use reloading and firing mechanism akin to a crossbow.
+
+Despite its somewhat complex production, it was a highly effective weapon in the hands of the pillagers, being able to utilise salvaged ammo from their victims and requiring essentially no training to use effectively when passed down from fallen comrades, allowing for an unfaltering campaign.</description>
+    <baseCost>750</baseCost>
+    <techLevel>Medieval</techLevel>
+	<prerequisites>
+	  <li>Smithing</li>
+	  <li>RecurveBow</li>	  
+	</prerequisites>	
+    <researchViewX>0</researchViewX>
+    <researchViewY>2</researchViewY>
+    <tab>AKN_CaretakerCreations</tab>		
+  </ResearchProjectDef>
+  
+  <!--=============================== Cross Bolter ===================================-->
+  <ResearchProjectDef>
+    <defName>AKN_CrossBolterRS</defName>
+    <label>Cross Bolter</label>
+    <description>A greatly superior upgrade to the Pillage Bolter, the Cross Bolter features double the limbs in a "cross" design that vastly increases its power while remaining reletively easy to use with upgraded reloading and firing mechanisms only possible via the use of tartarite reinforcing techniques.
+
+This truly allows one to fire any projectile that fits onto its rail, as long as one has the capability to manufacture such an intensive design.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Medieval</techLevel>
+	<prerequisites>
+	  <li>AKN_PillageBolterRS</li>
+      <li>AKN_TartariteReinforcement</li>	  
+	</prerequisites>
+    <researchViewX>1</researchViewX>
+    <researchViewY>2</researchViewY>
+    <tab>AKN_CaretakerCreations</tab>		
+  </ResearchProjectDef>     
+  
+</Defs>

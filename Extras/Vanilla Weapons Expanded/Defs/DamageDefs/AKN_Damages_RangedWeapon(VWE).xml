@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--=============================== Cross Bolter Knife Damage (VWE) ===============================--> 
+  <DamageDef>
+    <defName>AKN_RangedCut</defName>
+    <label>cut</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been cut to death.</deathMessage>
+    <hediff>Cut</hediff>
+    <cutExtraTargetsCurve>
+      <points>
+        <li>0, 0</li>
+        <li>0.3, 0.5</li>
+        <li>0.45, 1.0</li>
+        <li>0.5, 1.5</li>
+      </points>
+    </cutExtraTargetsCurve>
+    <cutCleaveBonus>1.0</cutCleaveBonus>	
+    <hediffSolid>Crack</hediffSolid>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+
+</Defs>

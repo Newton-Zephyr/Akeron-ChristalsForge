@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!--=============================== Base Reinforced Weapon ===============================-->
+  <ThingDef Name="AKN_BaseReinforcedWeapon" Abstract="True" ParentName="BaseWeapon">
+	<smeltable>true</smeltable>
+  </ThingDef>
+  
+  <RecipeDef Name="AKN_BaseReinforceRecipe" Abstract="True">
+    <workSpeedStat>AKN_ForgingSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+	<useIngredientsForColor>false</useIngredientsForColor>
+    <unfinishedThingDef>AKN_UnfinishedReinforce</unfinishedThingDef>
+    <workSkill>Crafting</workSkill>	
+    <recipeUsers>
+      <li>AKN_FueledSmithingTable</li>
+	  <li>AKN_ElectricSmithingTable</li>	  
+    </recipeUsers>
+  </RecipeDef>
+  
+    <!--=============================== Base Cross Bolter ===============================-->  
+  <ThingDef Name="AKN_BaseCrossBolter" Abstract="True" ParentName="AKN_BaseReinforcedWeapon">
+    <soundInteract>Bow_Large</soundInteract>
+	<thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>	
+    <weaponTags>
+      <li>ChristalRangedReinforced</li>
+    </weaponTags>
+
+	<modExtensions>
+      <li Class="VFECore.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>		
+  </ThingDef>  
+
+    <!--=============================== Base Reinforced Apparel ===============================-->
+  <ThingDef Name="AKN_BaseReinforcedApparel" Abstract="True" ParentName="ApparelNoQualityBase">
+	<smeltable>true</smeltable>
+    <comps>
+      <li Class="CompProperties_Styleable"></li>
+    </comps>
+  </ThingDef>
+</Defs>

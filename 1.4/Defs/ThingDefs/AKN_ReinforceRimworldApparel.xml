@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============================== Reinforce PlateArmor ===============================-->
+  <ThingDef ParentName="AKN_BaseReinforcedApparel">
+    <defName>AKN_TReinforcedPlateArmorI</defName>
+    <label>Minor Tartarite Reinforced Plate Armor</label>
+    <techLevel>Medieval</techLevel>
+    <description>Minor Tartarite Reinforced Plate Armor
+
+A suit of plate armor with a partially reinforced tatarite design. Due to the difficulties of such a large product, this design only properly reinforces a few select parts and mainly focuses on improving the joints and manueverability issues that come from the regular plate armor design.
+
+While not an outstanding design in its own right, it serves as an excellent foundation for other products.</description>
+    <graphicData>
+      <texPath>Things/Christal/Apparel/PlateArmor/Minor/Preview/AKN_PlateArmorReinforcedMinor_Preview</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <color>(110,100,100)</color>	  
+    </graphicData>
+    <costList>	
+      <AKN_Tartarite>80</AKN_Tartarite>
+      <Steel>80</Steel>
+    </costList>	
+    <statBases>
+      <WorkToMake>76500</WorkToMake>
+      <MaxHitPoints>850</MaxHitPoints>
+      <Mass>20</Mass>
+      <Flammability>0.0</Flammability>
+      <ArmorRating_Sharp>0.92</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.85</ArmorRating_Heat>
+      <Insulation_Cold>0</Insulation_Cold>
+      <Insulation_Heat>1</Insulation_Heat>
+      <DeteriorationRate>1.5</DeteriorationRate>	  
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.6</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Christal/Apparel/PlateArmor/Minor/AKN_PlateArmorReinforcedMinor</wornGraphicPath>
+	  <useWornGraphicMask>true</useWornGraphicMask>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>AKN_ChristalArmorReinforced</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+	<colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(110,100,100)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+  
+  <RecipeDef ParentName="AKN_BaseReinforceRecipe">
+    <defName>AKN_ReinforcePlateArmorI</defName>
+    <label>Forge Minor Tartarite Reinforced PlateArmor</label>
+    <description>Forge Minor Tartarite Reinforced PlateArmor</description>
+    <jobString>Forging Minor Tartarite Reinforced PlateArmor</jobString>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <researchPrerequisites>
+	<li>AKN_TartariteReinforcement</li>
+	<li>PlateArmor</li>
+	</researchPrerequisites>
+    <workAmount>76500</workAmount>	  
+    <ingredients>
+     <li>
+       <filter>
+         <thingDefs>
+            <li>Apparel_PlateArmor</li>
+         </thingDefs>
+       </filter>
+       <count>1</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_Tartarite</li>			
+         </thingDefs>
+       </filter>
+       <count>80</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>Steel</li>			
+         </thingDefs>
+       </filter>
+       <count>80</count>
+     </li>	 	 
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Apparel_PlateArmor</li>	  	
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_TReinforcedPlateArmorI>1</AKN_TReinforcedPlateArmorI>
+    </products>
+  </RecipeDef>
+  
+  <ThingDef ParentName="AKN_BaseReinforcedApparel">
+    <defName>AKN_TReinforcedPlateArmorII</defName>
+    <label>Major Tartarite Reinforced Plate Armor</label>
+    <techLevel>Medieval</techLevel>
+    <description>Major Tartarite Reinforced Plate Armor
+
+With the minor variant as a base, this version improves upon the entire design with improved joints utilising tartartite rings and more efficient curved platings, making it more likely to deflect attacks, along with form-fitting padding to absorb impacts and allow for more responsive movements, all covering even the hands and feet.
+
+As impressive as it is, producing such a design takes a hefty toll of resources and work.</description>
+    <graphicData>
+      <texPath>Things/Christal/Apparel/PlateArmor/Major/Preview/AKN_PlateArmorReinforcedMajor_Preview</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <color>(110,100,100)</color>	  
+    </graphicData>
+    <costList>
+      <AKN_TReinforcedPlateArmorI>1</AKN_TReinforcedPlateArmorI>
+      <AKN_ReinforcedTartariteRing>4</AKN_ReinforcedTartariteRing>
+      <AKN_Tartarite>150</AKN_Tartarite>
+      <Cloth>50</Cloth>
+    </costList>	
+    <statBases>
+      <WorkToMake>95400</WorkToMake>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Mass>15</Mass>
+      <Flammability>0.0</Flammability>
+      <ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.675</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.1</ArmorRating_Heat>
+      <Insulation_Cold>0</Insulation_Cold>
+      <Insulation_Heat>3</Insulation_Heat>
+      <DeteriorationRate>0.5</DeteriorationRate>	  
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.45</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>			
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Christal/Apparel/PlateArmor/Major/AKN_PlateArmorReinforcedMajor</wornGraphicPath>
+	  <useWornGraphicMask>true</useWornGraphicMask>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>AKN_ChristalArmorReinforced</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+	    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(110,100,100)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+  
+  <RecipeDef ParentName="AKN_BaseReinforceRecipe">
+    <defName>AKN_ReinforcePlateArmorII</defName>
+    <label>Forge Major Tartarite Reinforced PlateArmor</label>
+    <description>Forge Major Tartarite Reinforced PlateArmor</description>
+    <jobString>Forging Major Tartarite Reinforced PlateArmor</jobString>
+    <skillRequirements>
+      <Crafting>10</Crafting>
+    </skillRequirements>
+    <researchPrerequisites>
+	<li>AKN_TartariteReinforcement</li>
+	<li>PlateArmor</li>
+	</researchPrerequisites>
+    <workAmount>95400</workAmount>	  
+    <ingredients>
+     <li>
+       <filter>
+         <thingDefs>
+            <li>AKN_TReinforcedPlateArmorI</li>
+         </thingDefs>
+       </filter>
+       <count>1</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_ReinforcedTartariteRing</li>			
+         </thingDefs>
+       </filter>
+       <count>5</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>AKN_Tartarite</li>			
+         </thingDefs>
+       </filter>
+       <count>150</count>
+     </li>
+     <li>
+       <filter>
+         <thingDefs>
+           <li>Cloth</li>			
+         </thingDefs>
+       </filter>
+       <count>50</count>
+     </li>		 
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>AKN_TReinforcedPlateArmorI</li>	  	
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AKN_TReinforcedPlateArmorII>1</AKN_TReinforcedPlateArmorII>
+    </products>
+  </RecipeDef>    
+</Defs> 
